@@ -12,7 +12,7 @@ To install Terraform, visit [Terraform.io](https://www.terraform.io/downloads.ht
 
 ## Configure Terraform
 
-After you install Terraform, create a directory for the configuration file.
+Create a directory for the Terraform configuration file.
 
 ```shell
 $ mkdir terraform-demo
@@ -130,7 +130,7 @@ Plan: 2 to add, 0 to change, 0 to destroy.
 ╵
 ```
 
-Type `yes` at the prompt and press ENTER to provision the resources. This command can take a few minutes to run. Ignore any deprecated attribute warnings.
+Type `yes` at the prompt and press ENTER to create the resources. This command can take a few minutes to run. Ignore any deprecated attribute warnings.
 
 ```shell
 Do you want to perform these actions?
