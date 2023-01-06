@@ -1,6 +1,6 @@
 # Getting Started with Terraform
 
-Terraform is the most popular langauge for defining and provisioning infrastructure as code (IaC). Let's see how you can use Terraform to create and destroy your own infrastructure resources. Resources are the components of your infrastructure, such as an EC2 instance, Docker container image, or other component. See [Resources](https://developer.hashicorp.com/terraform/language/resources) to learn more.
+Terraform is the most popular langauge for defining and provisioning infrastructure as code (IaC). In this tutorial, learn how to use Terraform to create and destroy your own infrastructure resources. Resources are the components of your infrastructure, such as an EC2 instance, Docker container image, or other component. See [Resources](https://developer.hashicorp.com/terraform/language/resources) to learn more.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ resource "docker_image" "nginx" {
 
 Save and close the file.
 
-## Create and destroy resources
+## Create resources
 
 Initialize Terraform to install the Docker provider specified in the code. Providers are Terraform plugins that allow Terraform to connect to other platforms and use APIs. See [Providers](https://developer.hashicorp.com/terraform/language/providers) for more information.
 
@@ -90,7 +90,7 @@ commands will detect it and remind you to do so if necessary.
 
 Check for errors. If you see errors, check that you correctly copied and pasted the code.
 
-If you don't see any errors, provision the resources.
+If you don't see any errors, create the resources.
 
 ```shell
 $ terraform apply
@@ -152,6 +152,8 @@ docker_container.nginx: Creation complete after 4s [id=8dec00715c2e5f02fbd70d2ce
 │ 
 │ (and one more similar warning elsewhere)
 ```
+
+## Destroy the resources
 
 After you create the resources, destroy them.
 
