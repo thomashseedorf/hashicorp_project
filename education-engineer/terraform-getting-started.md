@@ -153,7 +153,7 @@ docker_container.nginx: Creation complete after 4s [id=8dec00715c2e5f02fbd70d2ce
 │ (and one more similar warning elsewhere)
 ```
 
-Destroy the infrastructure resources.
+After you create the resources, destroy them.
 
 ```shell
 $ terraform destroy
@@ -213,4 +213,4 @@ Destroy complete! Resources: 2 destroyed.
 
 ## Next steps
 
-To learn more, see the tutorials on how you can [change infrastructure](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-change), [define input variables](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/aws-variables), and more. You might also consider asking a question and receiving help in the [Community Forum](https://discuss.hashicorp.com/c/terraform-core/27).
+To learn more, see the tutorials on how you can [change infrastructure](https://developer.hashicorp.com/terraform/tutorials/docker-get-started/docker-change), [define input variables](https://developer.hashicorp.com/terraform/tutorials/docker-get-started/docker-destroy), and more. You might also consider asking a question and receiving help in the [Community Forum](https://discuss.hashicorp.com/c/terraform-core/27).
