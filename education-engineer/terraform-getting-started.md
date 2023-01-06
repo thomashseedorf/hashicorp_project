@@ -103,62 +103,8 @@ Terraform will perform the following actions:
 
   # docker_container.nginx will be created
   + resource "docker_container" "nginx" {
-      + attach                                      = false
-      + bridge                                      = (known after apply)
-      + command                                     = (known after apply)
-      + container_logs                              = (known after apply)
-      + container_read_refresh_timeout_milliseconds = 15000
-      + entrypoint                                  = (known after apply)
-      + env                                         = (known after apply)
-      + exit_code                                   = (known after apply)
-      + gateway                                     = (known after apply)
-      + hostname                                    = (known after apply)
-      + id                                          = (known after apply)
-      + image                                       = (known after apply)
-      + init                                        = (known after apply)
-      + ip_address                                  = (known after apply)
-      + ip_prefix_length                            = (known after apply)
-      + ipc_mode                                    = (known after apply)
-      + log_driver                                  = (known after apply)
-      + logs                                        = false
-      + must_run                                    = true
-      + name                                        = "training"
-      + network_data                                = (known after apply)
-      + read_only                                   = false
-      + remove_volumes                              = true
-      + restart                                     = "no"
-      + rm                                          = false
-      + runtime                                     = (known after apply)
-      + security_opts                               = (known after apply)
-      + shm_size                                    = (known after apply)
-      + start                                       = true
-      + stdin_open                                  = false
-      + stop_signal                                 = (known after apply)
-      + stop_timeout                                = (known after apply)
-      + tty                                         = false
-      + wait                                        = false
-      + wait_timeout                                = 60
 
-      + healthcheck {
-          + interval     = (known after apply)
-          + retries      = (known after apply)
-          + start_period = (known after apply)
-          + test         = (known after apply)
-          + timeout      = (known after apply)
-        }
-
-      + labels {
-          + label = (known after apply)
-          + value = (known after apply)
-        }
-
-      + ports {
-          + external = 80
-          + internal = 80
-          + ip       = "0.0.0.0"
-          + protocol = "tcp"
-        }
-    }
+# ... < OUTPUT TRUNCATED >
 
   # docker_image.nginx will be created
   + resource "docker_image" "nginx" {
@@ -224,77 +170,8 @@ Terraform will perform the following actions:
   # docker_container.nginx will be destroyed
   - resource "docker_container" "nginx" {
       - attach                                      = false -> null
-      - command                                     = [
-          - "nginx",
-          - "-g",
-          - "daemon off;",
-        ] -> null
-      - container_read_refresh_timeout_milliseconds = 15000 -> null
-      - cpu_shares                                  = 0 -> null
-      - dns                                         = [] -> null
-      - dns_opts                                    = [] -> null
-      - dns_search                                  = [] -> null
-      - entrypoint                                  = [
-          - "/docker-entrypoint.sh",
-        ] -> null
-      - env                                         = [] -> null
-      - gateway                                     = "172.17.0.1" -> null
-      - group_add                                   = [] -> null
-      - hostname                                    = "8dec00715c2e" -> null
-      - id                                          = "8dec00715c2e5f02fbd70d2cee75cc60787c1a91fae94edd44ad6979eebadba6" -> null
-      - image                                       = "sha256:1403e55ab369cd1c8039c34e6b4d47ca40bbde39c371254c7cba14756f472f52" -> null
-      - init                                        = false -> null
-      - ip_address                                  = "172.17.0.2" -> null
-      - ip_prefix_length                            = 16 -> null
-      - ipc_mode                                    = "private" -> null
-      - links                                       = [] -> null
-      - log_driver                                  = "json-file" -> null
-      - log_opts                                    = {} -> null
-      - logs                                        = false -> null
-      - max_retry_count                             = 0 -> null
-      - memory                                      = 0 -> null
-      - memory_swap                                 = 0 -> null
-      - must_run                                    = true -> null
-      - name                                        = "training" -> null
-      - network_data                                = [
-          - {
-              - gateway                   = "172.17.0.1"
-              - global_ipv6_address       = ""
-              - global_ipv6_prefix_length = 0
-              - ip_address                = "172.17.0.2"
-              - ip_prefix_length          = 16
-              - ipv6_gateway              = ""
-              - network_name              = "bridge"
-            },
-        ] -> null
-      - network_mode                                = "default" -> null
-      - privileged                                  = false -> null
-      - publish_all_ports                           = false -> null
-      - read_only                                   = false -> null
-      - remove_volumes                              = true -> null
-      - restart                                     = "no" -> null
-      - rm                                          = false -> null
-      - runtime                                     = "runc" -> null
-      - security_opts                               = [] -> null
-      - shm_size                                    = 64 -> null
-      - start                                       = true -> null
-      - stdin_open                                  = false -> null
-      - stop_signal                                 = "SIGQUIT" -> null
-      - stop_timeout                                = 0 -> null
-      - storage_opts                                = {} -> null
-      - sysctls                                     = {} -> null
-      - tmpfs                                       = {} -> null
-      - tty                                         = false -> null
-      - wait                                        = false -> null
-      - wait_timeout                                = 60 -> null
 
-      - ports {
-          - external = 80 -> null
-          - internal = 80 -> null
-          - ip       = "0.0.0.0" -> null
-          - protocol = "tcp" -> null
-        }
-    }
+# ... < OUTPUT TRUNCATED >
 
   # docker_image.nginx will be destroyed
   - resource "docker_image" "nginx" {
@@ -315,19 +192,6 @@ Plan: 0 to add, 0 to change, 2 to destroy.
 │ The attribute "latest" is deprecated. Refer to the provider documentation for
 │ details.
 ╵
-
-Do you really want to destroy all resources?
-  Terraform will destroy all your managed infrastructure, as shown above.
-  There is no undo. Only 'yes' will be accepted to confirm.
-
-  Enter a value: yes
-
-docker_container.nginx: Destroying... [id=8dec00715c2e5f02fbd70d2cee75cc60787c1a91fae94edd44ad6979eebadba6]
-docker_container.nginx: Destruction complete after 1s
-docker_image.nginx: Destroying... [id=sha256:1403e55ab369cd1c8039c34e6b4d47ca40bbde39c371254c7cba14756f472f52nginx:latest]
-docker_image.nginx: Destruction complete after 0s
-
-Destroy complete! Resources: 2 destroyed.
 ```
 
 To confirm you want to destroy the resources, type `yes` and press ENTER. Terraform destroys the resources it created earlier.
