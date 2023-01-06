@@ -19,7 +19,7 @@ $ mkdir terraform-demo
 $ cd terraform-demo
 ```
 
-Create a Terraform configuration file in the directory.
+Create a configuration file in the directory.
 
 ```shell
 $ touch main.tf
@@ -55,9 +55,7 @@ Save and close the file.
 
 ## Create and destroy resources
 
-Initialize Terraform. Terraform installs the Docker provider specified in the code. 
-
-Providers are Terraform plugins that allow Terraform to connect to other platforms and use APIs. See [Providers](https://developer.hashicorp.com/terraform/language/providers) for more information.
+Initialize Terraform to install the Docker provider specified in the code. Providers are Terraform plugins that allow Terraform to connect to other platforms and use APIs. See [Providers](https://developer.hashicorp.com/terraform/language/providers) for more information.
 
 ```shell
 $ terraform init
@@ -92,7 +90,7 @@ commands will detect it and remind you to do so if necessary.
 
 Check for errors. If you see errors, check that you correctly copied and pasted the code.
 
-If you don't see any errors, enter the command below, type `yes` at the prompt, and press ENTER to provision the resources. This command can take a few minutes to run.
+If you don't see any errors, provision the resources.
 
 ```shell
 $ terraform apply
@@ -184,7 +182,11 @@ Plan: 2 to add, 0 to change, 0 to destroy.
 │ 
 │ (and one more similar warning elsewhere)
 ╵
+```
 
+Type `yes` at the prompt and press ENTER to provision the resources. This command can take a few minutes to run. Ignore any deprecated attribute warnings.
+
+```shell
 Do you want to perform these actions?
   Terraform will perform the actions described above.
   Only 'yes' will be accepted to approve.
@@ -326,11 +328,24 @@ docker_image.nginx: Destroying... [id=sha256:1403e55ab369cd1c8039c34e6b4d47ca40b
 docker_image.nginx: Destruction complete after 0s
 
 Destroy complete! Resources: 2 destroyed.
-
-
 ```
 
 To confirm you want to destroy the resources, type `yes` and press ENTER. Terraform destroys the resources it created earlier.
+
+```shell
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+docker_container.nginx: Destroying... [id=8dec00715c2e5f02fbd70d2cee75cc60787c1a91fae94edd44ad6979eebadba6]
+docker_container.nginx: Destruction complete after 1s
+docker_image.nginx: Destroying... [id=sha256:1403e55ab369cd1c8039c34e6b4d47ca40bbde39c371254c7cba14756f472f52nginx:latest]
+docker_image.nginx: Destruction complete after 0s
+
+Destroy complete! Resources: 2 destroyed.
+```
 
 ## Next steps
 
